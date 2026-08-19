@@ -1,16 +1,26 @@
 {
 	"schemaVersion": 1,
 	"id": "citx",
-	"version": "1.0-mc1.21.1",
+	"version": "1.0.1-mc1.21.1+",
 	"name": "CITX",
 	"description": "A mod that allows easy renaming of CIT items with a custom command.",
-	"authors": ["Aerhazu"],
+	"authors": ["Aerhazu (Lavandula Collective)"],
 	"contact": {
-		"homepage": "",
-		"Github": "https://github.com/aerhazu",
-		"Modrinth": "https://modrinth.com/mod/citx"
+		"homepage": "https://lavandula-collective.gitbook.io/site",
+		"issues": "https://github.com/Lavandula-Collective/CITX/issues"
 	},
-	"license": "MIT",
+	"custom": {
+		"modmenu": {
+			"update_checker": true,
+			"links": {
+				"modmenu.modrinth": "https://modrinth.com/mod/citx",
+				"modmenu.wiki": "https://lavandula-collective.gitbook.io/site/citx",
+				"modmenu.discord": "https://discord.gg/DXFpzAn2fh",
+				"modmenu.kofi": "https://ko-fi.com/aerhazuwu"
+			}
+		}
+	},
+	"license": "Apache-2.0",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
