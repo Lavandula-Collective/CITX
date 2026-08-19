@@ -203,7 +203,7 @@ public class CITXMod implements ClientModInitializer {
 
         refreshItem(client);
 
-        playSuccessSound(client);
+        playResetSound(client);
 
         client.player.sendMessage(
                 Text.literal("§aItem name reset."),
@@ -376,8 +376,8 @@ public class CITXMod implements ClientModInitializer {
          * The remaining issue appears to be CIT model caching,
          * not the ItemStack itself.
          *
-         * We'll replace this later if we discover a reliable
-         * client-side refresh method.
+         * I'll replace this later if I discover a reliable
+         * client-side refresh method T.T
          */
     }
     // =========================================================
@@ -392,6 +392,23 @@ public class CITXMod implements ClientModInitializer {
 
         client.player.playSound(
                 SoundEvents.BLOCK_AMETHYST_CLUSTER_HIT,
+                SoundCategory.PLAYERS,
+                0.2F,
+                1.00F
+        );
+    }
+    // =========================================================
+    // RESET SOUND
+    // =========================================================
+
+    private void playResetSound(MinecraftClient client) {
+
+        if (client.player == null) {
+            return;
+        }
+
+        client.player.playSound(
+                SoundEvents.ENTITY_ENDER_EYE_DEATH,
                 SoundCategory.PLAYERS,
                 0.2F,
                 1.00F
